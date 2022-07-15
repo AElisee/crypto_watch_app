@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TableLine from "./TableLine";
 
 const Table = ({ coinsData }) => {
   const [rangeNumber, setRangeNumber] = useState(100);
@@ -10,13 +11,14 @@ const Table = ({ coinsData }) => {
     "Volume",
     "1h",
     "1j",
+    "1s",
     "1m",
     "1a",
     "ATH",
   ];
   return (
     <div className="table-container">
-      <div className="table-header">
+      <ul className="table-header">
         <div className="range-container">
           <span>
             Top{" "}
@@ -54,7 +56,13 @@ const Table = ({ coinsData }) => {
             <label htmlFor={el}>{el}</label>
           </li>
         ))}
-      </div>
+      </ul>
+      {coinsData &&
+        coinsData
+          .slice(0, rangeNumber)
+          .map((coin, index) => (
+            <TableLine key={index} coin={coin} index={index} />
+          ))}
     </div>
   );
 };

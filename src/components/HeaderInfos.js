@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import PercentCahnge from "./PercentCahnge";
+import PercentCahnge from "./PercentChange";
 import TableFilters from "./TableFilters";
 
 const HeaderInfos = () => {

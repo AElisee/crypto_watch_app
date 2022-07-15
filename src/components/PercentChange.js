@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import colors from "../styles/_settings.scss";
-const PercentCahnge = ({ percent }) => {
+const PercentChange = ({ percent }) => {
   const [color, setColor] = useState();
 
   useEffect(() => {
@@ -21,4 +21,4 @@ const PercentCahnge = ({ percent }) => {
   );
 };
 
-export default PercentCahnge;
+export default PercentChange;
