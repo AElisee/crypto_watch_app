@@ -10,16 +10,20 @@
     @media screen and (max-width: 1020px) {
       grid-template-columns: 276px 80px 80px 100px repeat(7, 1fr);
     }
+
     @media screen and (max-width: 850px) {
       grid-template-columns: 276px 80px 80px 100px repeat(4, 1fr);
     }
+
     @media screen and (max-width: 715px) {
       grid-template-columns: 220px 80px repeat(4, 1fr);
     }
+
     @media screen and (max-width: 540px) {
       grid-template-columns: 170px 80px repeat(4, 1fr);
     }
   }
+
   .table-header {
     height: 44px;
     align-items: center;
@@ -51,13 +55,16 @@
     }
 
     @media screen and (max-width: 850px) {
+
       li:nth-child(8),
       li:nth-child(9),
       li:nth-child(10) {
         display: none;
       }
     }
+
     @media screen and (max-width: 715px) {
+
       li:nth-child(3),
       li:nth-child(4) {
         display: none;
@@ -100,10 +107,12 @@
           width: 70%;
         }
       }
+
       input[type="range"]::-webkit-slider-runnable-track {
         appearance: none;
         height: 10px;
       }
+
       input[type="range"]::-webkit-slider-thumb {
         appearance: none;
         width: 6px;
@@ -114,10 +123,12 @@
         cursor: grab;
         transition: 0.15s;
       }
+
       input[type="range"]::-webkit-slider-thumb:active {
         cursor: grabbing;
         transform: scale(2);
       }
+
       .top {
         margin: 0 !important;
         visibility: hidden;
@@ -127,14 +138,16 @@
         }
       }
     }
+
     input[type="radio"] {
       display: none;
 
-      &:checked ~ label {
+      &:checked~label {
         font-weight: 900;
         color: $color1;
       }
     }
+
     label {
       user-select: none;
       cursor: pointer;
@@ -159,13 +172,16 @@
     }
 
     @media screen and (max-width: 850px) {
+
       p:nth-child(8),
       p:nth-child(9),
       p:nth-child(10) {
         display: none;
       }
     }
+
     @media screen and (max-width: 715px) {
+
       p:nth-child(4),
       p:nth-child(3) {
         display: none;
@@ -175,13 +191,14 @@
     &:hover {
       background: rgba(128, 128, 128, 0.25);
     }
+
     .infos-container {
       display: grid;
       grid-template-columns: 25px 22px 32px 1fr;
       height: 100%;
       align-items: center;
 
-      > img {
+      >img {
         height: 12px;
         display: block;
         margin-left: auto;
@@ -193,7 +210,7 @@
         }
       }
 
-      > p {
+      >p {
         text-align: center;
         margin-left: 4px;
       }
@@ -208,6 +225,7 @@
           height: 15px;
         }
       }
+
       .infos {
         height: 100%;
         width: 100%;
@@ -223,6 +241,7 @@
             display: none;
           }
         }
+
         img {
           height: 14px;
           padding: 0 1px;
@@ -233,13 +252,16 @@
             transform: scale(1.3);
           }
         }
+
         a {
           transform: translateY(2px);
         }
+
         h4 {
           margin-left: 6px;
           letter-spacing: 1px;
         }
+
         span {
           color: $white2;
           margin: 3px 2px 0 5px;
@@ -249,6 +271,7 @@
             display: none;
           }
         }
+
         a {
           img {
             transform: translateY(1px);
@@ -258,11 +281,13 @@
             }
           }
         }
+
         p {
           margin: 0 10px;
         }
       }
     }
+
     .volume,
     .mktcap {
       color: $white2;

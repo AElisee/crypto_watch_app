@@ -3,6 +3,7 @@ import axios from "axios";
 import GlobalChart from "./components/GlobalChart";
 import HeaderInfos from "./components/HeaderInfos";
 import Table from "./components/Table";
+import ToTop from "./components/ToTop";
 
 const App = () => {
   const [coinsData, setcoinsData] = useState([]);
@@ -14,6 +15,13 @@ const App = () => {
       .then((res) => {
         setcoinsData(res.data);
       });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 145) {
+        document.querySelector(".table-header").classList.add("active");
+      } else {
+        document.querySelector(".table-header").classList.remove("active");
+      }
+    });
   }, []);
   return (
     <div className="app-container">
@@ -22,6 +30,7 @@ const App = () => {
         <GlobalChart coinsData={coinsData} />
       </header>
       <Table coinsData={coinsData} />
+      <ToTop />
     </div>
   );
 };
